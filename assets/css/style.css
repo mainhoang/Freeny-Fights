@@ -1,0 +1,31 @@
+* {
+	/*margin: 0 auto !important;*/
+	/*padding: 0 !important;*/
+	border-radius: 0 !important;
+}
+
+.top {
+	color: white;
+	background-color: black;
+}
+
+.character-wrapper {
+
+}
+
+.character-names {
+	/*background-color: yellow;*/
+	/*border: 1px solid #ccc;*/
+	color: #a4a4a4;
+}
+
+.character-images {
+	height: 225px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.character-points {
+	color: limegreen;
+}
+
