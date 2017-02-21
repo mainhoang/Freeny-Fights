@@ -9,8 +9,12 @@
 	background-color: black;
 }
 
-.character-wrapper {
+.top h2 {
+	color: red;
+}
 
+.character:hover {
+	border: 2px solid lightblue;
 }
 
 .character-names {
@@ -26,6 +30,6 @@
 }
 
 .character-points {
-	color: limegreen;
+	color: red;
 }
 

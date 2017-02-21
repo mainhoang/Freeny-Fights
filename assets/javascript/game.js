@@ -2,8 +2,6 @@ $(document).ready(function(){
 
 	console.log("hello");
 	
-	
-
 		var characters = [
 			kitty = {
 				name: "Hello Kitty",
@@ -46,8 +44,12 @@ $(document).ready(function(){
 
 		var enemy = "";
 		var me = "";
+		var winCounter = 0;
+		var lossCounter = 0;
 		var characterInfo = "";
-		var charSelected = false;
+		var meSelected = false;
+		var enemySelected = false;
+		var lockChar = false;
 
 		console.log(characters[0]);
 
@@ -56,7 +58,7 @@ $(document).ready(function(){
 
 			for(var i = 0; i < characters.length; i++){
 				
-				characterInfo = $("<div class='character-wrapper col-lg-2 col-md-2 col-sm-4 col-xs-6'><h4 class='character-names'>" 
+				characterInfo = $("<div class='character col-lg-2 col-md-2 col-sm-4 col-xs-6'><h4 class='character-names'>" 
 								+ characters[i].name + 
 								"</h4><img class='character-images img-responsive' src='"
 								+ characters[i].imageURL +
@@ -68,14 +70,15 @@ $(document).ready(function(){
 
 			}
 
+			$(".character").on("click", function(){
+			alert("yay!");
+		})
+
 		}
 
+		renderDisplay();
 
 		
-
-
-
-		renderDisplay();
 
 	
 		
