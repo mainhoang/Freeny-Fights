@@ -1,23 +1,72 @@
 * {
 	/*margin: 0 auto !important;*/
 	/*padding: 0 !important;*/
-	border-radius: 0 !important;
+	/*border-radius: 0 !important;*/
+	background-repeat: no-repeat !important;
 }
 
-.top {
-	color: white;
-	background-color: black;
+h1{
+	color: white !important;
 }
-
-.top h2 {
+#top h2 {
 	color: red;
 }
 
-.character:hover {
+.before-start {
+
+}
+
+.before-start h2 {
+	
+}
+
+#stage, #top {
+	background-color: black; 
+}
+
+.started {
+	display: none;
+}
+
+.clickable:hover {
 	border: 2px solid lightblue;
 }
 
-.character-names {
+#stage .card {
+	height: 362px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 6px;
+}
+
+.button-wrapper {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.btn-lightblue {
+	color: white;
+	background-color: lightblue;
+	border-color: lightblue;
+}
+
+.btn-lightblue:hover {
+	color: white;
+	background-color: #89a7b1;
+	border-color: #89a7b1;
+}
+
+.message-area {
+	background-color: white;
+	height: 234px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 6px;
+}
+
+.names {
 	/*background-color: yellow;*/
 	/*border: 1px solid #ccc;*/
 	color: #a4a4a4;
@@ -29,7 +78,17 @@
 	margin-right: auto;
 }
 
-.character-points {
+.character-pts {
 	color: red;
+}
+
+.your-img, .enemy-img {
+	height: 225px;
+	background-size: contain;
+	background-position: center;
+	/*background-image: url("../images/domo.gif");*/
+}
+.your-pts, .enemy-pts {
+	color: limegreen;
 }
 

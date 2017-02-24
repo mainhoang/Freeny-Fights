@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>About Me</title>    
+		<title>RPG Freeny</title>    
 
     	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -18,11 +18,36 @@
 
 		<div class="container">
 
-			<div class="top jumbotron text-center">
-				<h1>Freeny Fights!  <small>Choose a Character to Begin!</small></h1>
-				<hr>
-				<h2>The Enemy Awaits...</h2>
+			<div id="top" class="before-start jumbotron text-center">
+				<div class="row">
+					<h1>Freeny Fights!  <small>Choose a Character to Begin!</small></h1>
+					<hr>
+					<h2>The Enemy Awaits...</h2>
+				</div>
+			</div>
 
+			<div id="stage" class="started jumbotron text-center">
+				<div class="row">
+					<div class='card col-lg-4 col-md-4 col-sm-4 col-xs-6 pull-left' value='1'>
+						<h2>Your Character</h2>
+						<h4 class='your-player names'></h4>
+						<div class='your-img'></div>
+						<p class='your-pts'></p>
+					</div>
+
+					<div class='button-wrapper col-lg-4 col-md-4 col-sm-4 col-xs-6 pull-left' value='1'>
+						<button class="btn btn-lightblue col-lg-8 col-lg-offset-2">RESTART</button>
+						<div class="message-area col-lg-8 col-lg-offset-2">Hello!</div>
+						<button class="btn btn-danger col-lg-8 col-lg-offset-2">KILL 'EM</button>
+					</div>
+				
+					<div class='card col-lg-4 col-md-4 col-sm-4 col-xs-6 pull-right' value='6'>
+						<h2>Your Enemy</h2>
+						<h4 class='your-enemy names'></h4>
+						<div class='enemy-img'></div>
+						<p class='enemy-pts'></p>
+					</div>
+				</div>
 			</div>
 
 			<div id="character-display" class="text-center">
