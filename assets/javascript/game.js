@@ -39,33 +39,37 @@ $(document).ready(function(){
 				health: 200,
 				attack: 30, 
 			},
-	
 		];
 
-		var enemy = "";
-		var yourCharacter = {};
-		var characterInfo = "";
+		var enemy = {}, you = {};
+		var characterCard;
+		var characterName, characterImages, characterPoints;
 		var hasYourCharacter = false;
 		var hasEnemy = false;
 		var lockChar = false;
 		var gameStarted =false;
 
-
 		function renderChoices(){
+
 
 			for(var i = 0; i < characters.length; i++){
 
-				characterInfo = $("<div class='card clickable col-lg-2 col-md-2 col-sm-4 col-xs-6' value='" 
-								+ (i + 1) +
-								"'><h4 class='names'>" 
-								+ characters[i].name + 
-								"</h4><img class='character-images img-responsive' src='"
-								+ characters[i].imageURL +
-								"'><p class='character-pts'>"
-								+ characters[i].health +
-								"</p></div>");
+				var characterCard = $("<div class='card clickable col-lg-2 col-md-2 col-sm-4 col-xs-6'></div>");
+				$("#choices-display").append(characterCard);
+				characterCard.attr("value", i + 1);
 
-				$("#character-display").append(characterInfo);
+				
+				var characterName = $("<h4 class='names'></h4>");
+				characterCard.append(characterName);
+				characterName.text(characters[i].name);
+
+				var characterImages = $("<div class='character-imgs'></div>");
+				characterCard.append(characterImages);
+				characterImages.css("backgroundImage","url('" + characters[i].imageURL + "')")
+				
+				var characterPoints =$("<p class='character-pts'></p>");
+				characterCard.append(characterPoints);
+				characterPoints.text(characters[i].health);
 
 			}
 
@@ -76,9 +80,10 @@ $(document).ready(function(){
 			$(".before-start").css("display","none");
 			$(".started").css("display","block");
 
-			$(".your-player").text(yourCharacter.name);
-			$(".your-img").css("backgroundImage","url('" + yourCharacter.imageURL + "')");
-			$(".your-pts").text(yourCharacter.health);
+			$(".your-player").text(you.name);
+			
+			$(".your-img").css("backgroundImage","url('" + you.imageURL + "')");
+			$(".your-pts").text(you.health);
 
 			$(".your-enemy").text(enemy.name);
 			$(".enemy-img").css("backgroundImage","url('" + enemy.imageURL + "')");
@@ -109,7 +114,7 @@ $(document).ready(function(){
 
 					if(hasYourCharacter === false){
 
-						yourCharacter = selectedCharacter;
+						you = selectedCharacter;
 						hasYourCharacter = true;
 
 					}else{
@@ -120,6 +125,8 @@ $(document).ready(function(){
 						lockChar = true;
 
 					}
+
+					console.log(you);
 
 					stageFight();
 				

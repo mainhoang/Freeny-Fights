@@ -72,17 +72,17 @@ h1{
 	color: #a4a4a4;
 }
 
-.character-images {
+/*.character-images {
 	height: 225px;
 	margin-left: auto;
 	margin-right: auto;
-}
+}*/
 
 .character-pts {
 	color: red;
 }
 
-.your-img, .enemy-img {
+.your-img, .enemy-img, .character-imgs {
 	height: 225px;
 	background-size: contain;
 	background-position: center;
