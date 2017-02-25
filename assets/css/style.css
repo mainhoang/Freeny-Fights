@@ -42,8 +42,8 @@ h1{
 }
 
 .button-wrapper {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .btn-lightblue {
@@ -60,23 +60,20 @@ h1{
 
 .message-area {
 	background-color: white;
-	height: 234px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	height: 164px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	border-radius: 6px;
+	padding: 30px;
+}
+.message-area p {
+	font-size: 12px;
+	font-family: "Courier";	
 }
 
 .names {
-	/*background-color: yellow;*/
-	/*border: 1px solid #ccc;*/
 	color: #a4a4a4;
 }
-
-/*.character-images {
-	height: 225px;
-	margin-left: auto;
-	margin-right: auto;
-}*/
 
 .character-pts {
 	color: red;
